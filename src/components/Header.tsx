@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Github, Star, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const Header = () => {
@@ -20,31 +20,45 @@ const Header = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              功能特性
+          <nav className="hidden md:flex items-center gap-1">
+            <a href="#" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Product
             </a>
-            <a href="#quickstart" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              快速开始
+            <a href="#" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Solutions
             </a>
-            <a href="#docs" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              文档
+            <a href="#" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Resources
             </a>
-            <a href="#community" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              社区
+            <a href="#" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Open Source
+            </a>
+            <a href="#" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Pricing
             </a>
           </nav>
 
+          {/* Search */}
+          <div className="hidden md:flex items-center flex-1 max-w-md mx-4">
+            <div className="relative w-full">
+              <input
+                type="text"
+                placeholder="Search or jump to..."
+                className="w-full h-8 px-3 text-sm bg-secondary border border-border rounded-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary text-foreground placeholder:text-muted-foreground"
+              />
+              <span className="absolute right-2 top-1/2 -translate-y-1/2 px-1.5 text-xs text-muted-foreground border border-border rounded">
+                /
+              </span>
+            </div>
+          </div>
+
           {/* Actions */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="github" size="sm" className="gap-2">
-              <Star className="h-4 w-4" />
-              <span>Star</span>
-              <span className="ml-1 rounded-full bg-primary/20 px-2 py-0.5 text-xs text-primary">12.8k</span>
+            <Button variant="ghost" size="sm">
+              Sign in
             </Button>
-            <Button variant="hero" size="sm" className="gap-2">
-              <Github className="h-4 w-4" />
-              查看源码
+            <Button variant="outline" size="sm">
+              Sign up
             </Button>
           </div>
 
@@ -60,27 +74,28 @@ const Header = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border/50 animate-fade-in">
-            <nav className="flex flex-col gap-4">
-              <a href="#features" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                功能特性
+            <nav className="flex flex-col gap-2">
+              <a href="#" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Product
               </a>
-              <a href="#quickstart" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                快速开始
+              <a href="#" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Solutions
               </a>
-              <a href="#docs" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                文档
+              <a href="#" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Resources
               </a>
-              <a href="#community" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                社区
+              <a href="#" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Open Source
               </a>
-              <div className="flex gap-3 pt-4">
-                <Button variant="github" size="sm" className="flex-1">
-                  <Star className="h-4 w-4 mr-2" />
-                  Star
+              <a href="#" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Pricing
+              </a>
+              <div className="flex gap-3 pt-4 border-t border-border/50 mt-2">
+                <Button variant="ghost" size="sm" className="flex-1">
+                  Sign in
                 </Button>
-                <Button variant="hero" size="sm" className="flex-1">
-                  <Github className="h-4 w-4 mr-2" />
-                  源码
+                <Button variant="outline" size="sm" className="flex-1">
+                  Sign up
                 </Button>
               </div>
             </nav>
