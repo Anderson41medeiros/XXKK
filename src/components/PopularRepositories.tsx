@@ -53,13 +53,19 @@ const popularRepos = [
 
 const PopularRepositories = () => {
   return (
-    <section className="mb-8">
-      <h2 className="text-base font-normal text-foreground mb-4">
-        Popular repositories
+    <section className="mb-10">
+      <h2 className="text-sm font-semibold text-foreground mb-4 flex items-center gap-2">
+        <span className="text-muted-foreground">Pinned</span>
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {popularRepos.map((repo) => (
-          <RepositoryCard key={repo.name} {...repo} />
+        {popularRepos.map((repo, index) => (
+          <div 
+            key={repo.name} 
+            className={`opacity-0 animate-fade-in stagger-${Math.min(index + 1, 6)}`}
+            style={{ animationFillMode: 'forwards' }}
+          >
+            <RepositoryCard {...repo} />
+          </div>
         ))}
       </div>
     </section>

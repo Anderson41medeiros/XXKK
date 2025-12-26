@@ -21,13 +21,16 @@ const Index = () => {
       </Helmet>
 
       <div className="min-h-screen bg-background">
+        {/* Subtle background glow */}
+        <div className="fixed inset-0 hero-glow pointer-events-none" />
+        
         <Header />
         
-        <main className="pt-16">
+        <main className="relative pt-14">
           <TabNav activeTab="overview" />
           
           <div className="container mx-auto px-4 py-8">
-            <div className="flex flex-col lg:flex-row gap-8">
+            <div className="flex flex-col lg:flex-row gap-10">
               {/* Left Sidebar - Profile */}
               <ProfileSection />
               
@@ -38,27 +41,59 @@ const Index = () => {
               </div>
 
               {/* Right Sidebar */}
-              <div className="hidden xl:block w-72 shrink-0">
+              <aside className="hidden xl:block w-72 shrink-0 space-y-4">
                 <PeopleSection />
                 
-                <div className="mt-4 p-4 rounded-md border border-border bg-card/30">
+                <div className="pro-card p-4 rounded-xl">
                   <h3 className="text-sm font-semibold text-foreground mb-3">Top languages</h3>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <span className="w-3 h-3 rounded-full bg-[#3178c6]" />
-                      <span>TypeScript</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <span className="w-3 h-3 rounded-full bg-[#dea584]" />
-                      <span>Rust</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <span className="w-3 h-3 rounded-full bg-[#f1e05a]" />
-                      <span>JavaScript</span>
-                    </div>
+                  <div className="space-y-2.5">
+                    {[
+                      { name: "TypeScript", color: "#3178c6", percent: 45 },
+                      { name: "Rust", color: "#dea584", percent: 25 },
+                      { name: "Go", color: "#00ADD8", percent: 20 },
+                      { name: "Solidity", color: "#AA6746", percent: 10 },
+                    ].map((lang) => (
+                      <div key={lang.name} className="space-y-1">
+                        <div className="flex items-center justify-between text-xs">
+                          <div className="flex items-center gap-1.5 text-muted-foreground">
+                            <span 
+                              className="w-2.5 h-2.5 rounded-full" 
+                              style={{ backgroundColor: lang.color }} 
+                            />
+                            <span>{lang.name}</span>
+                          </div>
+                          <span className="text-muted-foreground/70">{lang.percent}%</span>
+                        </div>
+                        <div className="h-1.5 bg-secondary rounded-full overflow-hidden">
+                          <div 
+                            className="h-full rounded-full transition-all duration-500"
+                            style={{ 
+                              width: `${lang.percent}%`,
+                              backgroundColor: lang.color 
+                            }}
+                          />
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
-              </div>
+
+                {/* Sponsors */}
+                <div className="pro-card p-4 rounded-xl">
+                  <h3 className="text-sm font-semibold text-foreground mb-3">Sponsors</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {Array.from({ length: 8 }).map((_, i) => (
+                      <div 
+                        key={i}
+                        className="w-8 h-8 rounded-full bg-gradient-to-br from-secondary to-muted border border-border/40"
+                      />
+                    ))}
+                  </div>
+                  <a href="#" className="block mt-3 text-xs text-primary hover:underline underline-offset-2">
+                    View all sponsors →
+                  </a>
+                </div>
+              </aside>
             </div>
           </div>
         </main>
