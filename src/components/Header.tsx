@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X, Search, Bell, Plus, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import xxkkLogo from "@/assets/xxkk-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,10 +12,7 @@ const Header = () => {
         <div className="flex h-14 items-center justify-between gap-4">
           {/* Logo */}
           <a href="https://www.xxkk.com/en" className="flex items-center gap-2.5 group shrink-0">
-            <div className="relative flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br from-primary to-accent overflow-hidden">
-              <span className="text-base font-bold text-primary-foreground tracking-tight">X</span>
-              <div className="absolute inset-0 bg-gradient-to-t from-transparent to-white/20" />
-            </div>
+            <img src={xxkkLogo} alt="XXKK" className="h-9 w-9 rounded-lg" />
             <span className="text-lg font-semibold tracking-tight text-foreground">
               XXKK
             </span>
