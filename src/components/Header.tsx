@@ -20,20 +20,20 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-0.5">
-            <a href="#" className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-secondary/50">
-              Product
+            <a href="https://www.xxkk.com/en/markets" className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-secondary/50">
+              Markets
             </a>
-            <a href="#" className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-secondary/50">
-              Solutions
+            <a href="https://www.xxkk.com/en/buy-crypto" className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-secondary/50">
+              Buy Crypto
             </a>
-            <a href="#" className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-secondary/50">
-              Resources
+            <a href="https://www.xxkk.com/en/spot" className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-secondary/50">
+              Spot
             </a>
-            <a href="#" className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-secondary/50">
-              Open Source
+            <a href="https://www.xxkk.com/en/swap" className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-secondary/50">
+              USDT-M
             </a>
-            <a href="#" className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-secondary/50">
-              Pricing
+            <a href="https://www.xxkk.com/en/tradfi" className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-secondary/50">
+              TradFi
             </a>
           </nav>
 
@@ -92,20 +92,20 @@ const Header = () => {
               </div>
             </div>
             <nav className="flex flex-col gap-1">
-              <a href="#" className="px-3 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded-md transition-colors">
-                Product
+              <a href="https://www.xxkk.com/en/markets" className="px-3 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded-md transition-colors">
+                Markets
               </a>
-              <a href="#" className="px-3 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded-md transition-colors">
-                Solutions
+              <a href="https://www.xxkk.com/en/buy-crypto" className="px-3 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded-md transition-colors">
+                Buy Crypto
               </a>
-              <a href="#" className="px-3 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded-md transition-colors">
-                Resources
+              <a href="https://www.xxkk.com/en/spot" className="px-3 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded-md transition-colors">
+                Spot
               </a>
-              <a href="#" className="px-3 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded-md transition-colors">
-                Open Source
+              <a href="https://www.xxkk.com/en/swap" className="px-3 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded-md transition-colors">
+                USDT-M
               </a>
-              <a href="#" className="px-3 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded-md transition-colors">
-                Pricing
+              <a href="https://www.xxkk.com/en/tradfi" className="px-3 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded-md transition-colors">
+                TradFi
               </a>
               <div className="flex gap-2 pt-4 border-t border-border/40 mt-3">
                 <Button variant="outline" size="sm" className="flex-1 h-9">
