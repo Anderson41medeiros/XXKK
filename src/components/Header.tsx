@@ -61,11 +61,11 @@ const Header = () => {
               <Plus className="h-4 w-4" />
             </Button>
             <div className="w-px h-5 bg-border mx-1" />
-            <Button variant="ghost" size="sm" className="h-8 text-sm">
-              Sign in
+            <Button variant="ghost" size="sm" className="h-8 text-sm" asChild>
+              <a href="https://www.xxkk.com/en/login">Sign in</a>
             </Button>
-            <Button size="sm" className="h-8 text-sm bg-primary hover:bg-primary/90 text-primary-foreground">
-              Sign up
+            <Button size="sm" className="h-8 text-sm bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
+              <a href="https://www.xxkk.com/en/register">Sign up</a>
             </Button>
           </div>
 
@@ -108,11 +108,11 @@ const Header = () => {
                 TradFi
               </a>
               <div className="flex gap-2 pt-4 border-t border-border/40 mt-3">
-                <Button variant="outline" size="sm" className="flex-1 h-9">
-                  Sign in
+                <Button variant="outline" size="sm" className="flex-1 h-9" asChild>
+                  <a href="https://www.xxkk.com/en/login">Sign in</a>
                 </Button>
-                <Button size="sm" className="flex-1 h-9 bg-primary hover:bg-primary/90 text-primary-foreground">
-                  Sign up
+                <Button size="sm" className="flex-1 h-9 bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
+                  <a href="https://www.xxkk.com/en/register">Sign up</a>
                 </Button>
               </div>
             </nav>
