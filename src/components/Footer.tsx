@@ -1,4 +1,5 @@
 import { Github, Twitter, MessageCircle, Mail } from "lucide-react";
+import xxkkLogo from "@/assets/xxkk-logo.png";
 
 const Footer = () => {
   return (
@@ -8,9 +9,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-1">
             <a href="https://www.xxkk.com/en" className="flex items-center gap-2.5 mb-4">
-              <div className="flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br from-primary to-accent">
-                <span className="text-sm font-bold text-primary-foreground">X</span>
-              </div>
+              <img src={xxkkLogo} alt="XXKK" className="h-9 w-9 rounded-lg" />
               <span className="text-lg font-semibold text-foreground">XXKK</span>
             </a>
             <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
