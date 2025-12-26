@@ -14,7 +14,7 @@ const Footer = () => {
               <span className="text-xl font-bold text-gradient">XXKK</span>
             </a>
             <p className="text-sm text-muted-foreground mb-4">
-              新一代高性能开发框架，为现代 Web 应用而生。
+              India's most trusted cryptocurrency exchange. Trade Bitcoin, Ethereum & 200+ coins with INR.
             </p>
             <div className="flex gap-3">
               <a href="#" className="p-2 rounded-lg bg-secondary hover:bg-primary/10 hover:text-primary transition-colors">
@@ -34,32 +34,32 @@ const Footer = () => {
 
           {/* Links */}
           <div>
-            <h4 className="font-semibold mb-4">文档</h4>
+            <h4 className="font-semibold mb-4">Developers</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-foreground transition-colors">快速开始</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">API 参考</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">配置指南</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">示例项目</a></li>
+              <li><a href="#" className="hover:text-foreground transition-colors">API Documentation</a></li>
+              <li><a href="#" className="hover:text-foreground transition-colors">Trading SDK</a></li>
+              <li><a href="#" className="hover:text-foreground transition-colors">WebSocket API</a></li>
+              <li><a href="#" className="hover:text-foreground transition-colors">Smart Contracts</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">社区</h4>
+            <h4 className="font-semibold mb-4">Community</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-foreground transition-colors">GitHub 讨论</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Discord 服务器</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">贡献指南</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">行为准则</a></li>
+              <li><a href="#" className="hover:text-foreground transition-colors">GitHub Discussions</a></li>
+              <li><a href="#" className="hover:text-foreground transition-colors">Discord Server</a></li>
+              <li><a href="#" className="hover:text-foreground transition-colors">Bug Bounty Program</a></li>
+              <li><a href="#" className="hover:text-foreground transition-colors">Contributing Guide</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">更多</h4>
+            <h4 className="font-semibold mb-4">Resources</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-foreground transition-colors">博客</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">更新日志</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">路线图</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">品牌资源</a></li>
+              <li><a href="#" className="hover:text-foreground transition-colors">Blog</a></li>
+              <li><a href="#" className="hover:text-foreground transition-colors">Security Audits</a></li>
+              <li><a href="#" className="hover:text-foreground transition-colors">Status Page</a></li>
+              <li><a href="#" className="hover:text-foreground transition-colors">Brand Assets</a></li>
             </ul>
           </div>
         </div>
@@ -67,11 +67,11 @@ const Footer = () => {
         {/* Bottom */}
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2024 XXKK. 基于 MIT 协议开源。
+            © 2024 XXKK Exchange. Licensed under MIT.
           </p>
           <div className="flex gap-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-foreground transition-colors">隐私政策</a>
-            <a href="#" className="hover:text-foreground transition-colors">服务条款</a>
+            <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-foreground transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>
