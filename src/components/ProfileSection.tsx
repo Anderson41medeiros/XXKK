@@ -1,20 +1,13 @@
 import { MapPin, Link2, Mail, Users, Twitter, Building2, Shield } from "lucide-react";
+import xxkkLogo from "@/assets/xxkk-logo.png";
 
 const ProfileSection = () => {
   return (
     <aside className="w-full lg:w-80 shrink-0 animate-fade-in">
       {/* Avatar */}
       <div className="mb-5">
-        <div className="relative w-full aspect-square max-w-[280px] rounded-2xl border border-border/60 bg-gradient-to-br from-card to-secondary overflow-hidden group">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10" />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-[120px] font-bold text-gradient select-none">X</span>
-          </div>
-          {/* Subtle grid pattern */}
-          <div className="absolute inset-0 opacity-[0.03]" style={{
-            backgroundImage: 'linear-gradient(hsl(var(--foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)',
-            backgroundSize: '20px 20px'
-          }} />
+        <div className="relative w-full aspect-square max-w-[280px] rounded-2xl border border-border/60 bg-card overflow-hidden group flex items-center justify-center">
+          <img src={xxkkLogo} alt="XXKK" className="w-3/4 h-3/4 object-contain" />
         </div>
       </div>
 
