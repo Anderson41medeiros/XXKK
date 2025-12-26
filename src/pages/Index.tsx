@@ -17,7 +17,7 @@ const Index = () => {
         <meta property="og:title" content="XXKK - India's Leading Cryptocurrency Exchange" />
         <meta property="og:description" content="Trade Bitcoin, Ethereum & 200+ cryptocurrencies with INR. Fast deposits, low fees, bank-grade security." />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://xxkk.in" />
+        <link rel="canonical" href="https://www.xxkk.com/en" />
       </Helmet>
 
       <div className="min-h-screen bg-background">

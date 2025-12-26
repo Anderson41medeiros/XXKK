@@ -34,8 +34,8 @@ const ProfileSection = () => {
         </div>
         <div className="flex items-center gap-2 text-muted-foreground">
           <Link2 className="h-4 w-4 shrink-0" />
-          <a href="https://xxkk.in" className="text-primary hover:underline truncate">
-            https://xxkk.in
+          <a href="https://www.xxkk.com/en" className="text-primary hover:underline truncate">
+            www.xxkk.com/en
           </a>
         </div>
         <div className="flex items-center gap-2 text-muted-foreground">
@@ -52,8 +52,8 @@ const ProfileSection = () => {
         </div>
         <div className="flex items-center gap-2 text-muted-foreground">
           <Mail className="h-4 w-4 shrink-0" />
-          <a href="mailto:support@xxkk.in" className="text-muted-foreground hover:text-primary truncate">
-            support@xxkk.in
+          <a href="mailto:support@xxkk.com" className="text-muted-foreground hover:text-primary truncate">
+            support@xxkk.com
           </a>
         </div>
       </div>
