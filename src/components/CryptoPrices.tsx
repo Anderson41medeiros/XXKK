@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { TrendingUp, TrendingDown, RefreshCw } from "lucide-react";
+import { TrendingUp, TrendingDown, RefreshCw, Search, X } from "lucide-react";
 
 interface CryptoData {
   id: string;
@@ -14,13 +14,14 @@ const CryptoPrices = () => {
   const [cryptos, setCryptos] = useState<CryptoData[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const fetchPrices = async () => {
     try {
       setLoading(true);
       setError(null);
       const response = await fetch(
-        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false"
+        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&sparkline=false"
       );
       if (!response.ok) throw new Error("Failed to fetch prices");
       const data = await response.json();
@@ -35,7 +36,7 @@ const CryptoPrices = () => {
 
   useEffect(() => {
     fetchPrices();
-    const interval = setInterval(fetchPrices, 30000); // Refresh every 30s
+    const interval = setInterval(fetchPrices, 30000);
     return () => clearInterval(interval);
   }, []);
 
@@ -48,6 +49,13 @@ const CryptoPrices = () => {
     const sign = change >= 0 ? "+" : "";
     return `${sign}${change.toFixed(2)}%`;
   };
+
+  const filteredCryptos = cryptos.filter((crypto) =>
+    crypto.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    crypto.symbol.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  const displayedCryptos = searchQuery ? filteredCryptos : filteredCryptos.slice(0, 10);
 
   if (error) {
     return (
@@ -75,8 +83,28 @@ const CryptoPrices = () => {
           <RefreshCw className="h-4 w-4" />
         </button>
       </div>
+
+      {/* Search Input */}
+      <div className="relative mb-3">
+        <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground" />
+        <input
+          type="text"
+          placeholder="Search coins..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className="w-full h-8 pl-8 pr-8 text-sm bg-secondary/50 border border-border rounded-md text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary/50"
+        />
+        {searchQuery && (
+          <button
+            onClick={() => setSearchQuery("")}
+            className="absolute right-2.5 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+          >
+            <X className="h-3.5 w-3.5" />
+          </button>
+        )}
+      </div>
       
-      <div className="space-y-3">
+      <div className="space-y-3 max-h-80 overflow-y-auto">
         {loading && cryptos.length === 0 ? (
           Array.from({ length: 5 }).map((_, i) => (
             <div key={i} className="flex items-center justify-between animate-pulse">
@@ -90,8 +118,10 @@ const CryptoPrices = () => {
               </div>
             </div>
           ))
+        ) : displayedCryptos.length === 0 ? (
+          <p className="text-sm text-muted-foreground text-center py-4">No coins found</p>
         ) : (
-          cryptos.map((crypto) => (
+          displayedCryptos.map((crypto) => (
             <a
               key={crypto.id}
               href={`https://www.xxkk.com/en/spot/${crypto.symbol.toLowerCase()}-usdt`}
