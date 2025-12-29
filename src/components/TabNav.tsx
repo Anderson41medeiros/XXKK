@@ -1,17 +1,17 @@
-import { BookOpen, Box, Users, LayoutGrid } from "lucide-react";
+import { Star, TrendingUp, BarChart3, Briefcase } from "lucide-react";
 
 interface TabNavProps {
   activeTab?: string;
 }
 
 const tabs = [
-  { id: "overview", label: "Overview", icon: LayoutGrid },
-  { id: "repositories", label: "Repositories", icon: BookOpen, count: 10 },
-  { id: "packages", label: "Packages", icon: Box },
-  { id: "people", label: "People", icon: Users },
+  { id: "favorites", label: "Favorites", icon: Star, href: "https://www.xxkk.com/en/markets" },
+  { id: "spot", label: "Spot", icon: TrendingUp, href: "https://www.xxkk.com/en/spot/btc-usdt" },
+  { id: "usdt-m", label: "USDT-M", icon: BarChart3, href: "https://www.xxkk.com/en/swap/btc-usdt" },
+  { id: "tradfi", label: "TradFi", icon: Briefcase, href: "https://www.xxkk.com/en/tradfi" },
 ];
 
-const TabNav = ({ activeTab = "overview" }: TabNavProps) => {
+const TabNav = ({ activeTab = "favorites" }: TabNavProps) => {
   return (
     <nav className="border-b border-border/60 bg-background/50 backdrop-blur-sm sticky top-14 z-40">
       <div className="container mx-auto px-4">
@@ -19,7 +19,9 @@ const TabNav = ({ activeTab = "overview" }: TabNavProps) => {
           {tabs.map((tab) => (
             <a
               key={tab.id}
-              href={`#${tab.id}`}
+              href={tab.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className={`flex items-center gap-2 px-4 py-3 text-sm font-medium border-b-2 whitespace-nowrap transition-all ${
                 activeTab === tab.id
                   ? "border-primary text-foreground"
@@ -28,15 +30,6 @@ const TabNav = ({ activeTab = "overview" }: TabNavProps) => {
             >
               <tab.icon className="h-4 w-4" />
               <span>{tab.label}</span>
-              {tab.count !== undefined && (
-                <span className={`ml-1 px-2 py-0.5 text-xs font-medium rounded-full ${
-                  activeTab === tab.id 
-                    ? "bg-primary/10 text-primary" 
-                    : "bg-secondary text-muted-foreground"
-                }`}>
-                  {tab.count}
-                </span>
-              )}
             </a>
           ))}
         </div>
