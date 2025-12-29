@@ -5,6 +5,7 @@ import ProfileSection from "@/components/ProfileSection";
 import PopularRepositories from "@/components/PopularRepositories";
 import RepositoryList from "@/components/RepositoryList";
 import PeopleSection from "@/components/PeopleSection";
+import CryptoPrices from "@/components/CryptoPrices";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -42,6 +43,7 @@ const Index = () => {
 
               {/* Right Sidebar */}
               <aside className="hidden xl:block w-72 shrink-0 space-y-4">
+                <CryptoPrices />
                 <PeopleSection />
                 
                 <div className="pro-card p-4 rounded-xl">
