@@ -6,6 +6,7 @@ import PopularRepositories from "@/components/PopularRepositories";
 import RepositoryList from "@/components/RepositoryList";
 import PeopleSection from "@/components/PeopleSection";
 import CryptoPrices from "@/components/CryptoPrices";
+import PriceTicker from "@/components/PriceTicker";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -26,6 +27,7 @@ const Index = () => {
         <div className="fixed inset-0 hero-glow pointer-events-none" />
         
         <Header />
+        <PriceTicker />
         
         <main className="relative pt-14">
           <TabNav activeTab="overview" />

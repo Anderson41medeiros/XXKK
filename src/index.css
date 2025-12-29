@@ -233,4 +233,26 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Ticker animation */
+  .ticker-container {
+    width: 100%;
+  }
+
+  .ticker-track {
+    animation: ticker 40s linear infinite;
+  }
+
+  .ticker-track:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes ticker {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
 }
